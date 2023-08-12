@@ -1,6 +1,6 @@
 {
   "name": "replace-error-image",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Replace broken links with specified images.",
   "main": "dist/index.js",
   "files": [
@@ -8,6 +8,10 @@
   ],
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/akihiro2526/replace-error-image"
   },
   "keywords": [
     "wordpress",

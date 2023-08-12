@@ -1,6 +1,6 @@
 {
   "name": "replace-error-image",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Replace broken links with specified images.",
   "main": "dist/index.js",
   "files": [
@@ -9,6 +9,12 @@
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },
+  "keywords": [
+    "wordpress",
+    "image",
+    "error",
+    "replace"
+  ],
   "scripts": {
     "build": "rm -rf dist && rollup -c"
   },

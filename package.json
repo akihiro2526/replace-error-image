@@ -1,14 +1,13 @@
 {
   "name": "replace-error-image",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "description": "Replace broken links with specified images.",
   "main": "dist/index.js",
   "files": [
     "dist"
   ],
   "publishConfig": {
-    "access": "restricted",
-    "registry": "https://npm.pkg.github.com/"
+    "registry": "https://registry.npmjs.org/"
   },
   "scripts": {
     "build": "rm -rf dist && rollup -c"

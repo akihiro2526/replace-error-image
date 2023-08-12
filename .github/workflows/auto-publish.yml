@@ -1,0 +1,30 @@
+name: Publish package to GitHub Packages
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      packages: write
+      contents: read
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
+          registry-url: https://registry.npmjs.org/
+
+      - name: install
+        run: npm install
+
+      - name: build
+        run: npm run build
+
+      - name: publish
+        run: npm publish

@@ -1,4 +1,4 @@
-name: Publish package to GitHub Packages
+name: Publish package to NPM
 
 on:
   push:
@@ -14,17 +14,18 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-
       - uses: actions/setup-node@v3
         with:
           node-version: 18
           registry-url: https://registry.npmjs.org/
 
       - name: install
-        run: npm install
+        run: npm ci
 
       - name: build
         run: npm run build
 
       - name: publish
         run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
